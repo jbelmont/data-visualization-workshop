@@ -7,6 +7,18 @@
 * [D3 API Docs](#d3-api-docs)
 * [D3 Workshop content](#d3-workshop-content)
     * [Selections and Data](#selections-and-data)
+    * [Enter and Append](#enter-and-append)
+    * [Scales and Axes](#scales-and-axes)
+    * [First Challenge](#first-challenge)
+    * [Shapes](#shapes)
+    * [Second Challenge](#second-challenge)
+    * [Enter and Update](#enter-and-update)
+    * [Exit and Merge](#exit-and-merge)
+    * [Transitions](#transitions)
+    * [Third Challenge](#third-challenge)
+    * [Force Layout](#force-layout)
+    * [Position and Collision](#position-and-collision)
+    * [D3 and React](#d3-and-react)
 * [General Data Visualization Resources](#general-data-visualization)
 * [Data Visualization Experts and Companies](#data-visualization-experts-and-companies)
 
@@ -86,7 +98,82 @@ Follow the links below to learn more:
 * You can then save your code here and get interactive editor
 
 #### Selections and Data
-[Selections and Data Block Builder Demo](http://blockbuilder.org/anonymous/4576a68767493f518cfbb7419357e031)
+
+[Selections and Data Block Builder Demo](http://blockbuilder.org/jbelmont/f5c73b49d3478dfbb0135148fa04ad92)
+
+**Click `Fork` Button to Play with this on your own**
+
+#### Enter and Append
+
+[Enter and Append](http://blockbuilder.org/jbelmont/b3418f3b8f3f90f8de7bc59bc4aa3592)
+
+**Click `Fork` Button to Play with this on your own**
+
+#### Scales and Axis
+
+[Scales and Axis](http://blockbuilder.org/jbelmont/96f2c14132fb446e839ef8fd9e517267)
+
+**Click `Fork` Button to Play with this on your own**
+
+#### First Challenge
+
+1. Click `New` Button
+2. Code your solution 
+3. If you get stuck check out my solution at [Create a Chart](http://blockbuilder.org/jbelmont/2886fb042412ded3e40bf5cf168413b6)
+
+#### Shapes 
+
+[Shapes](http://blockbuilder.org/jbelmont/20804c53bec5b61d17c63d4c02c21c33)
+
+**Click `Fork` Button to Play with this on your own**
+
+#### Second Challenge
+
+1. Click `New` Button
+2. Code your solution
+3. If you get stuck check out my solution at [Create a line graph](http://blockbuilder.org/jbelmont/5055daf2ad141c7966141611ab4922fc)
+
+#### Enter and Update
+
+[Enter and Update](http://blockbuilder.org/jbelmont/58c7838aa492d04fd95d89c47bbe072e)
+
+**Click `Fork` Button to Play with this on your own**
+
+#### Exit and Merge
+
+[Exit and Merge](http://blockbuilder.org/jbelmont/8c162fe1631bd3453408b6fae52aa970)
+
+**Click `Fork` Button to Play with this on your own**
+
+#### Transitions
+
+[Transitions](http://blockbuilder.org/jbelmont/f97e5d4e4349ecd845ea7004074ddf34)
+
+**Click `Fork` Button to Play with this on your own**
+
+#### Third Challenge
+
+1. Click `New` Button
+2. Code your solution
+3. If you get stuck check out my solution at [Animating Transitions](http://blockbuilder.org/jbelmont/7c2d9eddc2da2d02da7ec92919f12278)
+
+#### Force Layout
+
+[Force Layout](http://blockbuilder.org/jbelmont/a63ee32b8913e7d1e34c10bb122842f4)
+
+**Click `Fork` Button to Play with this on your own**
+
+#### Position and Collision
+
+[Position and Collision](http://blockbuilder.org/jbelmont/f47a44d3f4f2f05c7cd684a0bf5f6b94)
+
+**Click `Fork` Button to Play with this on your own**
+
+#### D3 and React
+
+[D3 and React](http://blockbuilder.org/jbelmont/b6d4228d1978c568150825f9d575fbcf)
+
+**Click `Fork` Button to Play with this on your own**
 
 ## General Data Visualization Resources
 
