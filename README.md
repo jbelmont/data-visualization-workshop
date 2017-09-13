@@ -99,7 +99,34 @@ Follow the links below to learn more:
 
 #### Selections and Data
 
+[D3 Selections Documentation](https://github.com/d3/d3-selection)
+
+* Selections are immutable. 
+* All selection methods that affect which elements are selected (or their order) return a new selection rather than modifying the current selection.
+* However, note that elements are necessarily mutable, as selections drive transformations of the document!
+
 [Selections and Data Block Builder Demo](http://blockbuilder.org/jbelmont/f5c73b49d3478dfbb0135148fa04ad92)
+
+[Selecting Elements](https://github.com/d3/d3-selection#selecting-elements)
+
+```js
+var anchor = d3.select("a");
+```
+
+This will select the first element that matches the specified selector string.
+
+```js
+const enter = svg.selectAll('rect')
+```
+
+This will select all elements that match the specified selector string
+
+* If the selector is not a string, instead selects the specified array of nodes
+* this is useful if you already have a reference to nodes, such as this.childNodes within an event listener or a global such as document.links
+
+```js
+d3.selectAll(document.links).style("color", "red");
+```
 
 **Click `Fork` Button to Play with this on your own**
 
