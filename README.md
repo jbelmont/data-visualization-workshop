@@ -188,6 +188,8 @@ const div = d3.select("body")
 
 **Click `Fork` Button to Play with this on your own**
 
+[Enter and Append with Existing Rects](http://blockbuilder.org/jbelmont/bbc300e1ebe57b3f39477845a510eb33)
+
 #### Scales and Axis
 
 [Scales and Axis](http://blockbuilder.org/jbelmont/96f2c14132fb446e839ef8fd9e517267)
