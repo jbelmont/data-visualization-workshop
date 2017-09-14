@@ -7,6 +7,7 @@
 * [D3 API Docs](#d3-api-docs)
 * [D3 Workshop content](#d3-workshop-content)
     * [Selections and Data](#selections-and-data)
+    * [Selections Demo](#selections-demo)
     * [Enter and Append](#enter-and-append)
     * [Scales and Axes](#scales-and-axes)
     * [First Challenge](#first-challenge)
@@ -33,14 +34,14 @@
 
 ## Types of Visual Diagrams
 
-A diagram is a symbolic representation of information according to some visualization technique. 
+A diagram is a symbolic representation of information according to some visualization technique.
 
 ### Bar Charts
 
 [Bar Chart](https://en.wikipedia.org/wiki/Bar_chart)
 
-* A bar chart or bar graph is a chart or graph that presents categorical data with rectangular bars with heights or lengths proportional to the values that they represent. 
-* The bars can be plotted vertically or horizontally. 
+* A bar chart or bar graph is a chart or graph that presents categorical data with rectangular bars with heights or lengths proportional to the values that they represent.
+* The bars can be plotted vertically or horizontally.
 * A vertical bar chart is sometimes called a line graph.
 
 ![Bar Chart](images/bar-chart.png)
@@ -50,7 +51,7 @@ A diagram is a symbolic representation of information according to some visualiz
 [Line Chart](https://en.wikipedia.org/wiki/Line_chart)
 
 * A line chart or line graph is a type of chart which displays information as a series of data points called 'markers' connected by straight line segments.
-* It is a basic type of chart common in many fields. 
+* It is a basic type of chart common in many fields.
 * It is similar to a scatter plot except that the measurement points are ordered (typically by their x-axis value) and joined with straight line segments.
 * A line chart is often used to visualize a trend in data over intervals of time – a time series – thus the line is often drawn chronologically.
 
@@ -60,7 +61,7 @@ A diagram is a symbolic representation of information according to some visualiz
 
 [Scatter Plots](https://en.wikipedia.org/wiki/Scatter_plot)
 
-* A scatter plot (also called a scatter graph, scatter chart, scattergram, or scatter diagram) is a type of plot or mathematical diagram using Cartesian coordinates to display values for typically two variables for a set of data. 
+* A scatter plot (also called a scatter graph, scatter chart, scattergram, or scatter diagram) is a type of plot or mathematical diagram using Cartesian coordinates to display values for typically two variables for a set of data.
 * If the points are color-coded, one additional variable can be displayed.
 * The data is displayed as a collection of points, each having the value of one variable determining the position on the horizontal axis and the value of the other variable determining the position on the vertical axis
 
@@ -70,7 +71,7 @@ A diagram is a symbolic representation of information according to some visualiz
 
 D3 4.0 is a [collection of modules](https://github.com/d3) that are designed to work together
 * You can use the modules independently, or you can use them together as part of the default build.
-* The source and documentation for each module is available in its repository. 
+* The source and documentation for each module is available in its repository.
 
 Follow the links below to learn more:
 
@@ -89,23 +90,13 @@ Follow the links below to learn more:
 
 ## D3 Workshop content
 
-[Block Builder Editor](http://blockbuilder.org/)
-
-* A very nice editor to build d3 visualizations that get saved as gists
-
-* Click `START CODING` button
-* Click Login and you will be routed to github page to authorize application
-* You can then save your code here and get interactive editor
-
 #### Selections and Data
 
 [D3 Selections Documentation](https://github.com/d3/d3-selection)
 
-* Selections are immutable. 
+* Selections are immutable.
 * All selection methods that affect which elements are selected (or their order) return a new selection rather than modifying the current selection.
 * However, note that elements are necessarily mutable, as selections drive transformations of the document!
-
-[Selections and Data Block Builder Demo](http://blockbuilder.org/jbelmont/f5c73b49d3478dfbb0135148fa04ad92)
 
 [Selecting Elements](https://github.com/d3/d3-selection#selecting-elements)
 
@@ -128,9 +119,70 @@ This will select all elements that match the specified selector string
 d3.selectAll(document.links).style("color", "red");
 ```
 
+```js
+var even = d3.selectAll("tr").filter(":nth-child(even)");
+```
+
+Notice here that you can a css pseudo selector and you can also pass a function
+
+```js
+var even = d3.selectAll("tr").filter(function(d, i) { return i & 1; });
+```
+
+[Block Builder Editor](http://blockbuilder.org/)
+
+* A very nice editor to build d3 visualizations that get saved as gists
+
+* Click `START CODING` button
+* Click Login and you will be routed to github page to authorize application
+* You can then save your code here and get interactive editor
+
+#### Selections Demo
+
+[Selections and Data Block Builder Demo](http://blockbuilder.org/jbelmont/f5c73b49d3478dfbb0135148fa04ad92)
+
+[Selections Filter Demo](http://blockbuilder.org/jbelmont/e2017b083240255e42dffd515f9203d1)
+
 **Click `Fork` Button to Play with this on your own**
 
 #### Enter and Append
+
+[D3 Enter docs](https://github.com/d3/d3-selection#selection_enter)
+
+`enter`:
+
+* Returns the enter selection: placeholder nodes for each datum that had no corresponding DOM element in the selection.
+* The enter selection is empty for selections not returned by selection.data.
+
+* The enter selection is typically used to create “missing” elements corresponding to new data.
+* For example, to create DIV elements from an array of numbers:
+
+```js
+const div = d3.select("body")
+  .selectAll("div")
+  .data([4, 8, 15, 16, 23, 42])
+  .enter().append("div")
+    .text(d => d);
+```
+
+* If the body is initially empty, the above code will create six new DIV elements, append them to the body in-order, and assign their text content as the associated (string-coerced) number:
+
+```html
+<div>4</div>
+<div>8</div>
+<div>15</div>
+<div>16</div>
+<div>23</div>
+<div>42</div>
+```
+
+[D3 append docs](https://github.com/d3/d3-selection#selection_append)
+
+* If the specified type is a string, appends a new element of this type (tag name) as the last child of each selected element
+* Or before the next following sibling in the update selection if this is an enter selection.
+
+* If the specified type is a function, it is evaluated for each selected element, in order, being passed the current datum (d), the current index (i), and the current group (nodes), with this as the current DOM element (nodes[i]).
+* This function should return an element to be appended.
 
 [Enter and Append](http://blockbuilder.org/jbelmont/b3418f3b8f3f90f8de7bc59bc4aa3592)
 
@@ -145,10 +197,10 @@ d3.selectAll(document.links).style("color", "red");
 #### First Challenge
 
 1. Click `New` Button
-2. Code your solution 
+2. Code your solution
 3. If you get stuck check out my solution at [Create a Chart](http://blockbuilder.org/jbelmont/2886fb042412ded3e40bf5cf168413b6)
 
-#### Shapes 
+#### Shapes
 
 [Shapes](http://blockbuilder.org/jbelmont/20804c53bec5b61d17c63d4c02c21c33)
 
