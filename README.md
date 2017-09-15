@@ -192,7 +192,70 @@ const div = d3.select("body")
 
 #### Scales and Axis
 
+[D3 Scales Docs](https://github.com/d3/d3-scale)
+
+[D3 Axis Docs](https://github.com/d3/d3-scale)
+
 [Scales and Axis](http://blockbuilder.org/jbelmont/96f2c14132fb446e839ef8fd9e517267)
+
+Notice in this file that I make a call to `d3.csv`
+
+[d3 request docs for csv and tsv files](https://github.com/d3/d3-request#csv)
+
+* Returns a new request for the CSV file at the specified url with the default mime type text/csv.
+* If no callback is specified, this is equivalent to:
+
+```js
+d3.request(url)
+    .mimeType("text/csv")
+    .response(function(xhr) { return d3.csvParse(xhr.responseText, row); });
+```
+
+```js
+d3.request(url)
+    .mimeType("text/csv")
+    .response(function(xhr) { return d3.csvParse(xhr.responseText, row); })
+    .get(callback);
+```
+
+Here is our function in the blockbuilder file
+
+```js
+// dataset for city demographics by city
+d3.csv('demographic-states-by-city.csv', (err, data) => {
+  data.forEach(d => {
+    d[COUNT_HISPANICS] = Number(d[COUNT_HISPANICS]) + 0; // y
+  });
+
+  // get min/max
+  var min = d3.min(data, d => d[COUNT_HISPANICS]);
+  var max = d3.max(data, d => d[COUNT_HISPANICS]);
+  // or use extent, which gives back [min, max]
+  const extent = d3.extent(data, d => d[COUNT_HISPANICS]);
+
+  // try different scales, change the ranges, see what happens
+  const yScale = d3.scaleLinear()
+    .domain(extent)
+    .range([height, 0]);
+
+  // try passing in tick valuess
+  const yAxis = d3.axisLeft()
+    .scale(yScale);
+
+  const axis = d3.select('svg').append('g')
+    .attr('transform', 'translate(40, 20)')
+    .call(yAxis);
+
+  const text = axis.selectAll('text')
+    .attr('fill', d => d === 35 ? 'blue' : 'green')
+});
+```
+
+`d3.csv(url, row, callback);`
+
+Notice we provided a url and a callback but not `row`
+
+[Introduction to D3 Scales by Mike Bostock](https://medium.com/@mbostock/introducing-d3-scale-61980c51545f)
 
 **Click `Fork` Button to Play with this on your own**
 
