@@ -143,6 +143,72 @@ var even = d3.selectAll("tr").filter(function(d, i) { return i & 1; });
 
 [Selections Filter Demo](http://blockbuilder.org/jbelmont/e2017b083240255e42dffd515f9203d1)
 
+[D3 Selections `attr`](https://github.com/d3/d3-selection#selection_attr)
+
+* If a value is specified, sets the attribute with the specified name to the specified value on the selected elements and returns this selection.
+
+* If the value is a constant, all elements are given the same attribute value
+
+* Otherwise, if the value is a function, it is evaluated for each selected element, in order, being passed the current datum (d), the current index (i), and the current group (nodes), with this as the current DOM element (nodes[i]).
+
+* The function’s return value is then used to set each element’s attribute. A null value will remove the specified attribute.
+
+[D3 Selections `data`](https://github.com/d3/d3-selection#selection_data)
+
+* Joins the specified array of data with the selected elements, returning a new selection that represents the update selection: the elements successfully bound to data
+
+[D3 Selections `call`](https://github.com/d3/d3-selection#selection_call)
+
+* Invokes the specified function exactly once, passing in this selection along with any optional arguments.
+
+* Returns this selection. This is equivalent to invoking the function by hand but facilitates method chaining.
+
+For example, to set several styles in a reusable function:
+
+```js
+function name(selection, first, last) {
+  selection
+      .attr("first-name", first)
+      .attr("last-name", last);
+}
+```
+
+[D3 Selections `text`](https://github.com/d3/d3-selection#selection_text)
+
+* If a value is specified, sets the text content to the specified value on all selected elements, replacing any existing child elements.
+
+* If the value is a constant, then all elements are given the same text content; otherwise, if the value is a function, it is evaluated for each selected element, in order, being passed the current datum (d), the current index (i), and the current group (nodes), with this as the current DOM element (nodes[i]).
+
+* The function’s return value is then used to set each element’s text content. A null value will clear the content.
+
+[D3 Selections `append`](https://github.com/d3/d3-selection#selection_append)
+
+* If the specified type is a string, appends a new element of this type (tag name) as the last child of each selected element, or before the next following sibling in the update selection if this is an enter selection.
+
+* The latter behavior for enter selections allows you to insert elements into the DOM in an order consistent with the new bound data; however, note that selection.order may still be required if updating elements change order (i.e., if the order of new data is inconsistent with old data).
+
+* If the specified type is a function, it is evaluated for each selected element, in order, being passed the current datum (d), the current index (i), and the current group (nodes), with this as the current DOM element (nodes[i]). This function should return an element to be appended. (The function typically creates a new element, but it may instead return an existing element.)
+
+For example, to append a DIV element to each paragraph:
+
+`d3.selectAll("p").append("div");`
+
+This is equivalent to:
+
+```js
+d3.selectAll("p").append(function() {
+  return document.createElement("div");
+});
+```
+
+Which is equivalent to:
+
+```js
+d3.selectAll("p").select(function() {
+  return this.appendChild(document.createElement("div"));
+});
+```
+
 **Click `Fork` Button to Play with this on your own**
 
 #### Enter and Append
@@ -176,14 +242,6 @@ const div = d3.select("body")
 <div>42</div>
 ```
 
-[D3 append docs](https://github.com/d3/d3-selection#selection_append)
-
-* If the specified type is a string, appends a new element of this type (tag name) as the last child of each selected element
-* Or before the next following sibling in the update selection if this is an enter selection.
-
-* If the specified type is a function, it is evaluated for each selected element, in order, being passed the current datum (d), the current index (i), and the current group (nodes), with this as the current DOM element (nodes[i]).
-* This function should return an element to be appended.
-
 [Enter and Append](http://blockbuilder.org/jbelmont/b3418f3b8f3f90f8de7bc59bc4aa3592)
 
 **Click `Fork` Button to Play with this on your own**
@@ -193,6 +251,36 @@ const div = d3.select("body")
 #### Scales and Axis
 
 [D3 Scales Docs](https://github.com/d3/d3-scale)
+
+Key Functions:
+
+[Scale Band](https://github.com/d3/d3-scale#scaleBand)
+
+* Constructs a new band scale with the empty domain, the unit range [0, 1], no padding, no rounding and center alignment.
+
+[Scale Linear](https://github.com/d3/d3-scale#scaleLinear)
+
+* Constructs a new continuous scale with the unit domain [0, 1], the unit range [0, 1], the default interpolator and clamping disabled.
+
+* Linear scales are a good default choice for continuous quantitative data because they preserve proportional differences.
+
+* Each range value y can be expressed as a function of the domain value x: y = mx + b.
+
+[D3 Continuous `domain`](https://github.com/d3/d3-scale#continuous_domain)
+
+* If domain is specified, sets the scale’s domain to the specified array of numbers.
+* The array must contain two or more elements.
+* If the elements in the given array are not numbers, they will be coerced to numbers.
+* If domain is not specified, returns a copy of the scale’s current domain.
+
+```js
+var color = d3.scaleLinear()
+    .domain([-1, 0, 1])
+    .range(["red", "white", "green"]);
+
+color(-0.5); // "rgb(255, 128, 128)"
+color(+0.5); // "rgb(128, 192, 128)"
+```
 
 [D3 Axis Docs](https://github.com/d3/d3-scale)
 
@@ -261,9 +349,18 @@ Notice we provided a url and a callback but not `row`
 
 #### First Challenge
 
-1. Click `New` Button
-2. Code your solution
-3. If you get stuck check out my solution at [Create a Chart](http://blockbuilder.org/jbelmont/2886fb042412ded3e40bf5cf168413b6)
+Create a Bar Chart Using D3.js
+
+[Transform SVG Property](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/transform)
+[Paths SVG Property](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths)
+
+1. Go to [Create a Chart](http://blockbuilder.org/jbelmont/2886fb042412ded3e40bf5cf168413b6)
+2. Click `Fork` Button
+3. Change Background Color of `Italian` language to `#1ac81e` hex value
+
+**Hint you might need to remove class `bar` property and then call the appropriate method**
+
+If you get stuck here is the solution [Challenge Solution](http://blockbuilder.org/jbelmont/5d412c6263d520e36dd044d9a0201604)
 
 #### Shapes
 
