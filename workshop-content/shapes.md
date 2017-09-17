@@ -5,6 +5,7 @@
 * [Shapes](#shapes)
 * [SVG Elements](#svg-elements)
 * [Path Attribute](#path-attribute)
+* [Pie](#pie)
 * [Bread Crumb Navigation](#bread-crumb-navigation)
 
 ## Shapes
@@ -41,9 +42,34 @@ Imagine if you had to hand code this:
 
 ![Line Chart](../images/bostock-line-chart.png)
 
-[Shapes](http://blockbuilder.org/jbelmont/20804c53bec5b61d17c63d4c02c21c33)
+## Pie
 
-**Click `Fork` Button to Play with this on your own**
+[Pie Chart](https://github.com/d3/d3-shape#pies)
+
+* The pie generator does not produce a shape directly, but instead computes the necessary angles to represent a tabular dataset as a pie or donut chart
+* These angles can then be passed to an arc generator
+
+[D3 shape `pie` method](https://github.com/d3/d3-shape#pie)
+
+* Constructs a new pie generator with the default settings.
+
+[D3 shape `arc` method](https://github.com/d3/d3-shape#arc)
+
+* Constructs a new arc generator with the default settings.
+
+[D3 shape `arc` with args method](https://github.com/d3/d3-shape#_arc)
+
+If the radii and angles are instead defined as constants, you can generate an arc without any arguments:
+
+```js
+var arc = d3.arc()
+    .innerRadius(0)
+    .outerRadius(100)
+    .startAngle(0)
+    .endAngle(Math.PI / 2);
+
+arc(); // "M0,-100A100,100,0,0,1,100,0L0,0Z"
+```
 
 ## Bread Crumb Navigation
 _________________________

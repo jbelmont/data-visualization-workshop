@@ -3,6 +3,7 @@
 ## Sections:
 
 * [Scales and Axis](#scales-and-axis)
+* [D3 scale and axis methods](#d3-scale-and-axis-methods)
 * [Bread Crumb Navigation](#bread-crumb-navigation)
 
 ## Scales and Axis
@@ -99,6 +100,26 @@ d3.csv('demographic-states-by-city.csv', (err, data) => {
 `d3.csv(url, row, callback);`
 
 Notice we provided a url and a callback but not `row`
+
+## D3 scale and axis methods
+
+[D3 array method `extent`](https://github.com/d3/d3-array#extent)
+
+* Returns the minimum and maximum value in the given array using natural order.
+
+* If the array is empty, returns [undefined, undefined].
+
+* An optional accessor function may be specified, which is equivalent to calling array.map(accessor) before computing the extent.
+
+[D3 scale method `scaleTime`](https://github.com/d3/d3-scale#scaleTime)
+
+* Constructs a new time scale with the domain [2000-01-01, 2000-01-02]
+  * the unit range [0, 1], the default interpolator and clamping disabled.
+
+[D3 axis method `axisBottom`](https://github.com/d3/d3-axis#axisBottom)
+
+* Constructs a new bottom-oriented axis generator for the given scale, with empty tick arguments, a tick size of 6 and padding of 3.
+* In this orientation, ticks are drawn below the horizontal domain path.
 
 [Introduction to D3 Scales by Mike Bostock](https://medium.com/@mbostock/introducing-d3-scale-61980c51545f)
 

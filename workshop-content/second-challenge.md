@@ -7,9 +7,10 @@
 
 ## Second Challenge
 
-1. Click `New` Button
-2. Code your solution
-3. If you get stuck check out my solution at [Create a line graph](http://blockbuilder.org/jbelmont/5055daf2ad141c7966141611ab4922fc)
+[D3 Scale method `schemeCategory10`](https://github.com/d3/d3-scale#schemeCategory10)
+
+1. Alter [Shapes Challenge](http://blockbuilder.org/jbelmont/fff4217930e445e196adea773d42fe3a)
+2. Click `Fork` button
 
 ## Bread Crumb Navigation
 _________________________
