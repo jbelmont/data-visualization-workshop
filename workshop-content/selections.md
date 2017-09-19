@@ -3,6 +3,7 @@
 ## Sections:
 
 * [Selections and Data](#selections-and-data)
+* [Playing with D3](#playing-with-d3)
 * [Selections Demo](#selections-demo)
 * [Bread Crumb Navigation](#bread-crumb-navigation)
 
@@ -52,6 +53,10 @@ var even = d3.selectAll("tr").filter(function(d, i) { return i & 1; });
 * Click `START CODING` button
 * Click Login and you will be routed to github page to authorize application
 * You can then save your code here and get interactive editor
+
+## Playing with D3
+
+[Playing with D3](http://blockbuilder.org/jbelmont/ccd655bb9c410190e305408bb93871b9)
 
 ## Selections Demo
 
