@@ -40,6 +40,8 @@ const div = d3.select("body")
 
 ## Enter and Append Demo
 
+[Enter and Append with Circles](http://blockbuilder.org/jbelmont/03048c2bf48778b1d605345d7fdd6965)
+
 [Enter and Append](http://blockbuilder.org/jbelmont/b3418f3b8f3f90f8de7bc59bc4aa3592)
 
 **Click `Fork` Button to Play with this on your own**
