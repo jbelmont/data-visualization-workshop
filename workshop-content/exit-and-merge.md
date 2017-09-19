@@ -2,14 +2,14 @@
 
 ## Sections:
 
-* [Exit and Merge](#exit-and-merge)
+* [Enter Exit and Merge](#enter-exit-and-merge)
 * [Bread Crumb Navigation](#bread-crumb-navigation)
 
-## Exit and Merge
+## Enter Exit and Merge
 
-[Exit and Merge](http://blockbuilder.org/jbelmont/8c162fe1631bd3453408b6fae52aa970)
+[Enter and Update](http://blockbuilder.org/jbelmont/2ebf2c68f53b86fd77b8d318bfb668a0)
 
-**Click `Fork` Button to Play with this on your own**
+**We will go over the enter, update, and exit states via the Developer Tools**
 
 ## Bread Crumb Navigation
 _________________________
