@@ -12,5 +12,4 @@
 * [Transitions](workshop-content/transitions.md)
 * [Third Challenge](workshop-content/third-challenge.md)
 * [Force Layout](workshop-content/force-layout.md)
-* [Position and Collision](workshop-content/position-and-collision.md)
 * [D3 and Vuejs](workshop-content/d3-and-vuejs.md)

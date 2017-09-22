@@ -40,6 +40,10 @@ const div = d3.select("body")
 
 ## Enter and Append Demo
 
+[Svg Enter and Append](http://blockbuilder.org/jbelmont/3e6a7ce02a072da3db8a4f77483b811f)
+
+[SVG Enter Append Call](http://blockbuilder.org/jbelmont/d750c43050baf612a11c9bb42e62551b)
+
 [Enter and Append with Circles](http://blockbuilder.org/jbelmont/03048c2bf48778b1d605345d7fdd6965)
 
 [Enter and Append](http://blockbuilder.org/jbelmont/b3418f3b8f3f90f8de7bc59bc4aa3592)

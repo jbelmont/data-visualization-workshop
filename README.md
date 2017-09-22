@@ -21,6 +21,7 @@
 * [Data Visualization Best Practices](#data-visualization-best-practices)
 * [General Data Visualization Resources](#general-data-visualization-resources)
 * [Data Visualization Experts and Companies](#data-visualization-experts-and-companies)
+* [GitBook Link](#gitbook-link)
 
 ## What is Data Visualization
 
@@ -182,3 +183,7 @@ There is a wonderful illustration in this [Tableau White Paper](https://www.tabl
 * **[Stamen](http://stamen.com)** - Data visualization company, excellent blog, heavy focus on maps.
 * **[Fathom](http://fathom.info/latest/)** - Another interesting data visualization company.
 * **[Shirley Wu](http://sxywu.com/)** - Excellent blog on Data Visualization.
+
+## Gitbook Link
+
+[D3 Data Visualization Gitbook](https://www.marcelbelmont.com/data-visualization-workshop/)

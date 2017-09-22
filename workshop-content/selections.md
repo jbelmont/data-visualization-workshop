@@ -130,7 +130,7 @@ d3.selectAll("p").select(function() {
 });
 ```
 
-**Click `Fork` Button to Play with this on your own**
+[D3 style class attr and more play](http://blockbuilder.org/jbelmont/e991b69658afc57c5b8c4a0e9dd08fca)
 
 ## Bread Crumb Navigation
 _________________________
