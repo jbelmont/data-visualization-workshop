@@ -7,13 +7,12 @@
 
 ## D3 and Vuejs
 
-[D3 and Vuejs](http://blockbuilder.org/jbelmont/b6d4228d1978c568150825f9d575fbcf)
+[D3 and Vuejs jsFiddle](https://jsfiddle.net/jbelmont/peb26h33/8/)
 
-**Click `Fork` Button to Play with this on your own**
 
 ## Bread Crumb Navigation
 _________________________
 
 Previous | Next
 :------- | ---:
-← [Position and Collision](./position-and-collision.md) | [General Data Visualization Resources](../README.md) →
+← [Force layout](./force-layout.md) | [General Data Visualization Resources](../README.md) →
