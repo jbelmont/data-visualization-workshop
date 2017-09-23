@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <style>
+    body { margin:0;position:fixed;top:0;right:0;bottom:0;left:0; }
+    .link {
+      color: blue;
+     	list-style-type: none;
+      display: block;
+    }
+    .style-link {
+      color: yellow;
+    }
+    .what {
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main">
+    <a class="link">One</a>
+    <a class="link">Two</a>
+    <a class="link">Three</a>
+    <h5 class="heading">Four</h5>
+  </div>
+  <script>
+    d3.selectAll('a:nth-child(2)')
+    	.classed('style-link', true)
+    	.html('<b>Whaat</b>')
+    	.style('background-color', 'pink');
+
+    d3.selectAll('a:first-child')
+    	.attr('class', 'what')
+  </script>
+</body>
+</html>

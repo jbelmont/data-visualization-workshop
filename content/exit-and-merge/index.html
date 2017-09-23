@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <style>
+    body { margin:0;position:fixed;top:0;right:0;bottom:0;left:0; }
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <svg></svg>
+  <script>
+		var rectWidth = 100;
+    var height = 300;
+    var data = [
+      100, 250, 175, 200, 120
+    ];
+
+    var colors = d3.scaleOrdinal(d3.schemeCategory10);
+    var svg = d3.select('svg');
+
+    // Update
+    var bars = svg.selectAll('rect')
+        .data(data, d => d);
+
+    // exit
+    bars.exit().remove();
+
+    // enter
+    var enter = bars.enter().append('rect')
+    .attr('width', rectWidth)
+    .attr('stroke', '#fff');
+
+    // enter + update
+    bars = enter.merge(bars)
+      .attr('x', (d, i) => i * rectWidth)
+      .attr('y', d => height - d)
+      .attr('height', d => d)
+      .attr('fill', d => colors(d));
+  </script>
+</body>
+</html>

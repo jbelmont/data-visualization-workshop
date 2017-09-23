@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <style>
+    body { margin:0;position:fixed;top:0;right:0;bottom:0;left:0; }
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<svg>
+  <rect />
+  <rect />
+  <rect />
+  <rect />
+  <rect />
+</svg>
+<body>
+  <script>
+    const rectWidth = 200;
+    const height = 300;
+		const data = [225, 250, 150, 100, 75];
+        
+    d3.selectAll('rect')
+    	.data(data)
+    	.attr('x', (d, i) => i * rectWidth)
+    	.attr('y', d => height - d)
+    	.attr('width', rectWidth)
+    	.attr('height', d => d)
+    	.attr('fill', 'purple')
+    	.attr('stroke', '#fff');
+  </script>
+</body>
+</html>

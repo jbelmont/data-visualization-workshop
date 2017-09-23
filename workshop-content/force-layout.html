@@ -1,0 +1,587 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Force Layout · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="d3-and-vuejs.html" />
+    
+    
+    <link rel="prev" href="third-challenge.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="selections.html">
+            
+                <a href="selections.html">
+            
+                    
+                    Selections, Data, and Demo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="enter-and-append.html">
+            
+                <a href="enter-and-append.html">
+            
+                    
+                    Enter and Append
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="svg.html">
+            
+                <a href="svg.html">
+            
+                    
+                    SVG
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="scales-and-axis.html">
+            
+                <a href="scales-and-axis.html">
+            
+                    
+                    Scales and Axis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="first-challenge.html">
+            
+                <a href="first-challenge.html">
+            
+                    
+                    First Challenge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="shapes.html">
+            
+                <a href="shapes.html">
+            
+                    
+                    Shapes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="second-challenge.html">
+            
+                <a href="second-challenge.html">
+            
+                    
+                    Second Challenge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="enter-and-update.html">
+            
+                <a href="enter-and-update.html">
+            
+                    
+                    Enter and Update
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="exit-and-merge.html">
+            
+                <a href="exit-and-merge.html">
+            
+                    
+                    Exit and Merge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="transitions.html">
+            
+                <a href="transitions.html">
+            
+                    
+                    Transitions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="third-challenge.html">
+            
+                <a href="third-challenge.html">
+            
+                    
+                    Third Challenge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.13" data-path="force-layout.html">
+            
+                <a href="force-layout.html">
+            
+                    
+                    Force Layout
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="d3-and-vuejs.html">
+            
+                <a href="d3-and-vuejs.html">
+            
+                    
+                    D3 and Vuejs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Force Layout</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="data-visualization-workshop---force-layout">Data Visualization Workshop - Force Layout</h1>
+<h2 id="sections">Sections:</h2>
+<ul>
+<li><a href="#force-layout-documentation">Force Layout Documentation</a></li>
+<li><a href="#force-simulation">Force Simulation</a></li>
+<li><a href="#d3-force-functions">D3 Force Functions</a></li>
+<li><a href="#force-layout">Force Layout Demo</a></li>
+<li><a href="#bread-crumb-navigation">Bread Crumb Navigation</a></li>
+</ul>
+<h2 id="force-layout-documentation">Force Layout Documentation</h2>
+<p><a href="https://github.com/d3/d3-force" target="_blank">Force Layout Docs</a></p>
+<p>In the domain of information visualization, physical simulations are useful for studying networks and hierarchies!</p>
+<p><img src="../images/force-dragging.png" alt="Force Dragging"></p>
+<p>Force Layout is good at providing insights on the relationships between connections</p>
+<p><a href="http://d3indepth.com/force-layout/" target="_blank">d3 force layout guide</a></p>
+<p><strong>To give credit where it is due, the following content below is derived from the above url</strong></p>
+<p>D3 force layout uses a physics based simulator for positioning visual elements.</p>
+<p>Forces can be set up between elements, For example:</p>
+<ul>
+<li><p>all elements repel one another</p>
+</li>
+<li><p>elements are attracted to center(s) of gravity</p>
+</li>
+<li><p>linked elements are a fixed distance apart (network visualisation)</p>
+</li>
+<li><p>elements may not overlap (collision detection)</p>
+</li>
+</ul>
+<h2 id="force-simulation">Force Simulation</h2>
+<p>There are 4 steps in setting up force simulation:</p>
+<ol>
+<li><p>Create an array of objects</p>
+</li>
+<li><p>Call forceSimulation, passing in the array of objects.</p>
+</li>
+<li><p>Add one or more force functions (forceManyBody, forceCenter, forceCollide, etc) to the system</p>
+</li>
+<li><p>Set up callback function to update the element positions after each tick.</p>
+</li>
+</ol>
+<pre class="language-"><code class="lang-js"><span class="token keyword">const</span> dimensions <span class="token operator">=</span> <span class="token punctuation">{</span>
+  width<span class="token punctuation">:</span> <span class="token number">300</span><span class="token punctuation">,</span>
+  height<span class="token punctuation">:</span> <span class="token number">300</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> nodes <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> simulation <span class="token operator">=</span> d3<span class="token punctuation">.</span><span class="token function">forceSimulation</span><span class="token punctuation">(</span>nodes<span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">force</span><span class="token punctuation">(</span><span class="token string">&apos;charge&apos;</span><span class="token punctuation">,</span> d3<span class="token punctuation">.</span><span class="token function">forceManyBody</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">force</span><span class="token punctuation">(</span><span class="token string">&apos;center&apos;</span><span class="token punctuation">,</span> d3<span class="token punctuation">.</span><span class="token function">forceCenter</span><span class="token punctuation">(</span>dimensions<span class="token punctuation">.</span>width <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">,</span> dimensions<span class="token punctuation">.</span>height <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&apos;tick&apos;</span><span class="token punctuation">,</span> ticked<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">ticked</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> u <span class="token operator">=</span> d3<span class="token punctuation">.</span><span class="token function">select</span><span class="token punctuation">(</span><span class="token string">&apos;svg&apos;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">selectAll</span><span class="token punctuation">(</span><span class="token string">&apos;circle&apos;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">data</span><span class="token punctuation">(</span>nodes<span class="token punctuation">)</span>
+
+  u<span class="token punctuation">.</span><span class="token function">enter</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">&apos;circle&apos;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">&apos;r&apos;</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">merge</span><span class="token punctuation">(</span>u<span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">&apos;cx&apos;</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> d<span class="token punctuation">.</span>x
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">&apos;cy&apos;</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> d<span class="token punctuation">.</span>y
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+  u<span class="token punctuation">.</span><span class="token function">exit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="d3-force-functions">D3 Force Functions</h2>
+<p>Force functions are added to the simulation using .force() where the first argument is a user defined id and the second argument the force function:</p>
+<pre class="language-"><code class="lang-js">simulation<span class="token punctuation">.</span><span class="token function">force</span><span class="token punctuation">(</span><span class="token string">&apos;charge&apos;</span><span class="token punctuation">,</span> d3<span class="token punctuation">.</span><span class="token function">forceManyBody</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<h4 id="forcecenter">forceCenter</h4>
+<ul>
+<li><a href="https://github.com/d3/d3-force#forceCenter" target="_blank">forceCenter</a> (for setting the center of gravity of the system)</li>
+</ul>
+<p>Creates a new centering force with the specified x- and y- coordinates.
+If x and y are not specified, they default to &#x27E8;0,0&#x27E9;.</p>
+<p>forceCenter is useful (if not essential) for centering your elements as a whole about a center point. (Without it elements might disappear off the page.)</p>
+<p>Initialis with a center position:</p>
+<p><code>d3.forceCenter(100, 100)</code></p>
+<p>or using the configuration functions .x() and .y():</p>
+<p><code>d3.forceCenter().x(100).y(100)</code></p>
+<p><code>simulation.force(&apos;center&apos;, d3.forceCenter(100, 100))</code></p>
+<h4 id="forcemanybody">forceManyBody</h4>
+<ul>
+<li><a href="https://github.com/d3/d3-force#forceManyBody" target="_blank">forceManyBody</a> (for making elements attract or repel one another)</li>
+</ul>
+<p>Creates a new many-body force with the default parameters.</p>
+<p>forceManyBody causes all elements to attract or repel one another.
+The strength of the attraction or repulsion can be set using .strength() where a positive value will cause elements to attract one another while a negative value causes elements to repel each other.
+The default value is -30.</p>
+<p><code>simulation.force(&apos;charge&apos;, d3.forceManyBody().strength(-20))</code></p>
+<h4 id="forcecollide">forceCollide</h4>
+<ul>
+<li><a href="https://github.com/d3/d3-force#forceCollide" target="_blank">forceCollide</a> (for preventing elements overlapping)</li>
+</ul>
+<p>Creates a new circle collision force with the specified radius.
+If radius is not specified, it defaults to the constant one for all nodes.</p>
+<p>forceCollide is used to stop elements overlapping and is useful when &#x2018;clumping&#x2019; circles together.</p>
+<p>We must specify the radius of the elements using .radius():</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">var</span> numNodes <span class="token operator">=</span> <span class="token number">100</span>
+<span class="token keyword">var</span> nodes <span class="token operator">=</span> d3<span class="token punctuation">.</span><span class="token function">range</span><span class="token punctuation">(</span>numNodes<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>radius<span class="token punctuation">:</span> Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">25</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">var</span> simulation <span class="token operator">=</span> d3<span class="token punctuation">.</span><span class="token function">forceSimulation</span><span class="token punctuation">(</span>nodes<span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">force</span><span class="token punctuation">(</span><span class="token string">&apos;charge&apos;</span><span class="token punctuation">,</span> d3<span class="token punctuation">.</span><span class="token function">forceManyBody</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">strength</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">force</span><span class="token punctuation">(</span><span class="token string">&apos;center&apos;</span><span class="token punctuation">,</span> d3<span class="token punctuation">.</span><span class="token function">forceCenter</span><span class="token punctuation">(</span>width <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">,</span> height <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">force</span><span class="token punctuation">(</span><span class="token string">&apos;collision&apos;</span><span class="token punctuation">,</span> d3<span class="token punctuation">.</span><span class="token function">forceCollide</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">radius</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> d<span class="token punctuation">.</span>radius
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="forcex-and-forcey">forceX and forceY</h3>
+<p>forceX and forceY cause elements to be attracted towards specified position(s).</p>
+<h4 id="forcex">forceX</h4>
+<ul>
+<li><a href="https://github.com/d3/d3-force#forceX" target="_blank">forceX</a> for attracting elements to a given point</li>
+</ul>
+<p>Creates a new positioning force along the x-axis towards the given position x.
+If x is not specified, it defaults to 0.</p>
+<pre class="language-"><code class="lang-js">simulation<span class="token punctuation">.</span><span class="token function">force</span><span class="token punctuation">(</span><span class="token string">&apos;x&apos;</span><span class="token punctuation">,</span> d3<span class="token punctuation">.</span><span class="token function">forceX</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> xCenter<span class="token punctuation">[</span>d<span class="token punctuation">.</span>category<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="forcey">forceY</h4>
+<ul>
+<li><a href="https://github.com/d3/d3-force#forceY" target="_blank">forceY</a> for attracting elements to a given point</li>
+</ul>
+<p>Creates a new positioning force along the y-axis towards the given position y.
+If y is not specified, it defaults to 0.</p>
+<h4 id="forcelink">forceLink</h4>
+<ul>
+<li><a href="https://github.com/d3/d3-force#forceLink" target="_blank">forceLink</a> for creating a fixed distance between connected elements</li>
+</ul>
+<p>Creates a new link force with the specified links and default parameters.
+If links is not specified, it defaults to the empty array.</p>
+<ul>
+<li>forceLink pushes linked elements to be a fixed distance apart.</li>
+<li>It requires an array of links that specify which elements we want to link together. * Each link object specifies a source and target element, where the value is the element&#x2019;s array index:</li>
+</ul>
+<pre class="language-"><code class="lang-js"><span class="token keyword">var</span> links <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>source<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> target<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>source<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> target<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>source<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> target<span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>source<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> target<span class="token punctuation">:</span> <span class="token number">6</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>source<span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span> target<span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>source<span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span> target<span class="token punctuation">:</span> <span class="token number">7</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>source<span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">,</span> target<span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>source<span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">,</span> target<span class="token punctuation">:</span> <span class="token number">7</span><span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre>
+<p>We pass our links array into the forceLink function using .links():</p>
+<p><code>simulation.force(&apos;link&apos;, d3.forceLink().links(links))</code></p>
+<p><strong>Once again all credit for this content goes to <a href="http://d3indepth.com/force-layout/" target="_blank">d3indepth.com/force-layout/</a></strong></p>
+<h2 id="force-layout">Force Layout</h2>
+<p><a href="https://bl.ocks.org/mbostock/ad70335eeef6d167bc36fd3c04378048" target="_blank">Force Layout</a></p>
+<p><a href="http://blockbuilder.org/jbelmont/1aab97d586c87c2872b0ceeaa7769773" target="_blank">Force Layout Forked Demo</a></p>
+<h2 id="bread-crumb-navigation">Bread Crumb Navigation</h2>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Previous</th>
+<th style="text-align:right">Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x2190; <a href="third-challenge.html">Third Challenge</a></td>
+<td style="text-align:right"><a href="d3-and-vuejs.html">D3 and Vuejs</a> &#x2192;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="third-challenge.html" class="navigation navigation-prev " aria-label="Previous page: Third Challenge">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="d3-and-vuejs.html" class="navigation navigation-next " aria-label="Next page: D3 and Vuejs">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Force Layout","level":"1.13","depth":1,"next":{"title":"D3 and Vuejs","level":"1.14","depth":1,"path":"workshop-content/d3-and-vuejs.md","ref":"workshop-content/d3-and-vuejs.md","articles":[]},"previous":{"title":"Third Challenge","level":"1.12","depth":1,"path":"workshop-content/third-challenge.md","ref":"workshop-content/third-challenge.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","advanced-emoji","prism","highlight","copy-code-button"],"pluginsConfig":{"prism":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"workshop-content/force-layout.md","mtime":"2017-09-22T01:17:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-23T21:42:36.548Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
