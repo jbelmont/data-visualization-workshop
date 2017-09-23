@@ -1,4 +1,4 @@
-# Data Visualization Workshop - Shapes
+# Data Visualization Workshop - Second Challenge
 
 ## Sections:
 

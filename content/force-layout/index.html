@@ -10,16 +10,75 @@
 <body>
   <script>
     // Feel free to change or delete any of the code you see in this editor!
-    var svg = d3.select("body").append("svg")
-      .attr("width", 960)
-      .attr("height", 500)
+var margin = {top:20, bottom:20, left:20, right:20};
+var width = 600 - margin.left - margin.right;
+var height = 400 - margin.top - margin.bottom;
+var radius = 8;
+var colors = d3.scaleOrdinal(d3.schemeCategory10);
 
-    svg.append("text")
-      .text("Edit the code below to change me!")
-      .attr("y", 200)
-      .attr("x", 120)
-      .attr("font-size", 36)
-      .attr("font-family", "monospace")
+var svg = d3.select("body").append("svg")
+      .attr("width", width)
+      .attr("height", height)
+
+d3.json('miserables.json', function(err,data){
+  data.nodes.forEach(function(node){
+    var perRow = 4
+    node.focusX = (node.group % perRow) * 40;
+    node.focusY = Math.floor(node.group/perRow)*40;
+  });
+//   console.log(data.links)
+  var drag = d3.drag()
+  		.on('start', function(){
+        if (!d3.event.active){
+          simulation.alphaTarget(0.35).restart();
+        }
+      })
+  		.on('end', function(){
+        simulation.alphaTarget(0);
+        d3.event.subject.fx=null;
+ 	  		d3.event.subject.fy=null;
+      })
+
+  		.on('drag', function(){
+//       console.log(d3.event);
+      d3.event.subject.fx = d3.event.x;
+      d3.event.subject.fy = d3.event.y;
+    });
+
+  var simulation = d3.forceSimulation(data.nodes)
+ 		.force('center', d3.forceCenter(width/2, height/2))
+		.force('collide', d3.forceCollide(radius+15))
+  	.force('attraction', d3.forceManyBody().strength(30).distanceMin(200))
+  		.force('repulsion', d3.forceManyBody().strength(-30).distanceMax(200))
+ 	.force('x', d3.forceX().x(function(d){
+    return d.focusX
+  }))
+   	.force('y', d3.forceY().y(function(d){
+    return d.focusY
+  }))
+  .force('links', d3.forceLink(data.links).id(function(d){return d.id}))
+  .on('tick', ticked);
+
+ var links = svg.selectAll("line")
+ 		.data(data.links)
+ 		.enter().append('line')
+ 		.attr('stroke','#ccc');
+ var circles = svg.selectAll("circle")
+  	.data(data.nodes, function(d){return d.id})
+  	.enter().append("circle")
+  	.attr("r", radius)
+ 		.attr('fill', function(d){return colors(d.group)})
+ 		.call(drag);
+
+  function ticked(){
+    circles.attr('cx', function(d) {return d.x})
+    		.attr('cy', function (d) {return d.y})
+    links.attr('x1', function(d){return d.source.x})
+    		.attr('x2', function(d) {return d.target.x})
+    		.attr('y1', function(d) {return d.source.y})
+    		.attr('y2', function(d) {return d.target.y})
+  }
+});
 
   </script>
 </body>

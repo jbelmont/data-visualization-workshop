@@ -4,22 +4,118 @@
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <style>
     body { margin:0;position:fixed;top:0;right:0;bottom:0;left:0; }
+    .area-chart {
+      background: lightgray;
+      border: 1px solid black;
+    }
   </style>
 </head>
 
 <body>
+  <div class="area-chart"><div>
   <script>
-    // Feel free to change or delete any of the code you see in this editor!
-    var svg = d3.select("body").append("svg")
-      .attr("width", 960)
-      .attr("height", 500)
+    function setDimensions(selection, key, val) {
+      selection.attr(key, val);
+    }
 
-    svg.append("text")
-      .text("Edit the code below to change me!")
-      .attr("y", 200)
-      .attr("x", 120)
-      .attr("font-size", 36)
-      .attr("font-family", "monospace")
+    function responsivefy(svg) {
+      // get container + svg aspect ratio
+      var container = d3.select(svg.node().parentNode),
+          width = parseInt(svg.style("width")),
+          height = parseInt(svg.style("height")),
+          aspect = width / height;
+
+      // add viewBox and preserveAspectRatio properties,
+      // and call resize so that svg resizes on inital page load
+      svg.attr("viewBox", "0 0 " + width + " " + height)
+        .attr("preserveAspectRatio", "xMinYMid")
+        .call(resize);
+
+      // to register multiple listeners for same event type,
+      // you need to add namespace, i.e., 'click.foo'
+      // necessary if you call invoke this function for multiple svgs
+      // api docs: https://github.com/mbostock/d3/wiki/Selections#on
+      d3.select(window).on("resize." + container.attr("id"), resize);
+
+      // get width of container and resize svg to fit it
+      function resize() {
+        var targetWidth = parseInt(container.style("width"));
+        svg.attr("width", targetWidth);
+        svg.attr("height", Math.round(targetWidth / aspect));
+   }
+}
+
+		const margin = {
+      top: 10,
+      right: 20,
+      bottom: 30,
+      left: 30
+    };
+
+    const dimensions = {
+      width: 400,
+      height: 565
+    };
+
+    const svg = d3.select('.area-chart')
+    	.append('svg')
+    		.call(setDimensions, 'width', dimensions.width + margin.left + margin.right)
+    		.call(setDimensions, 'height', dimensions.height + margin.top + margin.bottom)
+	    .call(responsivefy)
+    	.append('g')
+    		.attr('transform', `translate(${margin.left},${margin.right})`);
+
+    d3.json('data.json', (err, data) => {
+      if (err) console.error(err);
+
+      const parseTime = d3.timeParse('%Y-%m-%d');
+			data.forEach(company => {
+        company.values.forEach(d => {
+          d.date = parseTime(d.date);
+          d.close = +d.close;
+        });
+      });
+
+      let xScale = d3.scaleTime()
+      	.domain([
+          d3.min(data, co => d3.min(co.values, d => d.date)),
+      		d3.max(data, co => d3.max(co.values, d => d.date))
+        ])
+      	.range([0, dimensions.width])
+
+      svg.append('g')
+      	.attr('transform', `translate(0, ${dimensions.height})`)
+      	.call(d3.axisBottom(xScale).ticks(5))
+
+
+      let yScale = d3.scaleLinear()
+      	.domain([
+          d3.min(data, co => d3.min(co.values, d => d.close)),
+      		d3.max(data, co => d3.max(co.values, d => d.close))
+         ])
+         .range([0, dimensions.height])
+
+      svg.append('g')
+      	.call(d3.axisLeft(yScale));
+
+      let area = d3.area()
+      	.x(d => xScale(d.date))
+        .y0(yScale(yScale.domain()[0]))
+        .y1(d => yScale(d.close))
+        .curve(d3.curveCatmullRom.alpha(0.5));
+
+      svg
+      	.selectAll('.area')
+      	.data(data)
+      	.enter()
+      	.append('path')
+      	.attr('class', 'area')
+      	.attr('d', d => area(d.values))
+        .style('stroke', (d, i) => ['#FF9900', '#3369E8'][i])
+        .style('stroke-width', 2)
+        .style('fill', (d, i) => ['#FF9900', '#3369E8'][i])
+        .style('fill-opacity', 0.25);
+    });
 
   </script>
 </body>

@@ -4,23 +4,50 @@
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <style>
     body { margin:0;position:fixed;top:0;right:0;bottom:0;left:0; }
+    svg {
+      width: 100%;
+      height: 100%;
+    }
   </style>
 </head>
 
 <body>
+  <svg></svg>
   <script>
-    // Feel free to change or delete any of the code you see in this editor!
-    var svg = d3.select("body").append("svg")
-      .attr("width", 960)
-      .attr("height", 500)
+    const COUNT_HISPANICS = 'COUNT HISPANIC LATINO';
+    const width = 900;
+    const height = 300;
+    let sum = 0;
 
-    svg.append("text")
-      .text("Edit the code below to change me!")
-      .attr("y", 200)
-      .attr("x", 120)
-      .attr("font-size", 36)
-      .attr("font-family", "monospace")
+    // dataset of city temperatures across time
+    d3.csv('demographic-states-by-city.csv', (err, data) => {
+      // clean the data
+      data.forEach(d => {
+        d[COUNT_HISPANICS] = Number(d[COUNT_HISPANICS]) + 0; // y
+      });
 
+      // get min/max
+      var min = d3.min(data, d => d[COUNT_HISPANICS]);
+      var max = d3.max(data, d => d[COUNT_HISPANICS]);
+      // or use extent, which gives back [min, max]
+      const extent = d3.extent(data, d => d[COUNT_HISPANICS]);
+
+      // try different scales, change the ranges, see what happens
+      const yScale = d3.scaleLinear()
+        .domain(extent)
+        .range([height, 0]);
+
+      // try passing in tick valuess
+     	const yAxis = d3.axisLeft()
+      	.scale(yScale);
+
+      const axis = d3.select('svg').append('g')
+        .attr('transform', 'translate(40, 20)')
+      	.call(yAxis);
+
+      const text = axis.selectAll('text')
+      	.attr('fill', d => d === 35 ? 'blue' : 'green')
+    });
   </script>
 </body>
 </html>
