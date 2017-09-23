@@ -171,18 +171,16 @@ There is a wonderful illustration in this [Tableau White Paper](https://www.tabl
 ## General Data Visualization Resources
 
 * **[Dashing D3js](https://www.dashingd3js.com/table-of-contents)**
-* **[Visualizing Data](http://www.visualisingdata.com)** -  a fantastic blog about data visualization. In particular, check out:
-* **[The Visualizing Data Resource List](http://www.visualisingdata.com/index.php/resources/)** - A massive list of data visualization tools
-* **[The Visualizing Data Dataset List](http://www.visualisingdata.com/index.php/references/)** - *click on 'Data Sources'*.  A list of interesting public data sets.
+* **[Visualizing Data](http://www.visualisingdata.com)** - a fantastic blog about data visualization.
 * **[Flowing Data](http://flowingdata.com)** - another data visualization blog.
 * **[Information Aesthetics](http://infosthetics.com)** - Another good blog.
+* **[Shirley Wu](http://sxywu.com/)** - Excellent blog on Data Visualization.
 
 ### Data Visualization Experts and Companies
 * **[Jer Thorp](http://blog.blprnt.com)** - Data artist.
 * **[Nicolas Feltron](http://feltron.tumblr.com)** - Data artist.
 * **[Stamen](http://stamen.com)** - Data visualization company, excellent blog, heavy focus on maps.
 * **[Fathom](http://fathom.info/latest/)** - Another interesting data visualization company.
-* **[Shirley Wu](http://sxywu.com/)** - Excellent blog on Data Visualization.
 
 ## Gitbook Link
 
