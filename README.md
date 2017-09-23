@@ -8,6 +8,7 @@
 * [List of D3 Modules](#list-of-d3-modules)
 * [Selections, Data, and Demo](workshop-content/selections.md)
 * [Enter and Append](workshop-content/enter-and-append.md)
+* [SVG](workshop-content/svg.md)
 * [Scales and Axis](workshop-content/scales-and-axis.md)
 * [First Challenge](workshop-content/first-challenge.md)
 * [Shapes](workshop-content/shapes.md)

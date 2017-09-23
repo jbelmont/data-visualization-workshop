@@ -57,4 +57,4 @@ _________________________
 
 Previous | Next
 :------- | ---:
-← [Selections](./selections.md) | [Scales and Axis](./scales-and-axis.md) →
+← [Selections](./selections.md) | [SVG](./svg.md) →
